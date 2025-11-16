@@ -1,14 +1,13 @@
-
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_ollama import ChatOllama
 from langchain_openai import ChatOpenAI
-from langchain_anthropic import ChatAnthropic
+from langchain_anthropic import ChatAnthropic 
 
 class Adapter:
     def __init__(self, env):
         #! We pull in the env variable and set defaults
-        self.provider = env("LLM_PROVIDER") or "ollama"
-        self.model = env("MODEL") or "llama3.2:3b"
+        self.provider = env("LLM_PROVIDER", default="ollama") or "ollama"
+        self.model = env("MODEL", default="llama3.2:3b") or "llama3.2:3b"
         self.api_key = env("API_KEY") or None
         #! Set up the basic prompt template
         self.prompt = ChatPromptTemplate.from_template(
@@ -32,7 +31,7 @@ class Adapter:
             if self.api_key is None:
                 raise ValueError("API key is required for Anthropic provider")
             self.llm_chat = ChatAnthropic(
-                model=self.model,
+                model_name=self.model,
                 anthropic_api_key=self.api_key
             )
         else:
