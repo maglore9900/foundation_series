@@ -37,12 +37,40 @@ Each folder contains the complete code for that part of the series, along with i
    git clone https://github.com/maglore9900/foundation_series.git
    cd foundation_series
    ```
-2. Navigate to the series you want to work with:
+
+2. Create and activate a virtual environment (shared across all parts):
+
+   ```bash
+   uv venv
+   ```
+
+   **Activate the virtual environment:**
+
+   - **Windows:**
+
+     ```bash
+     .venv\Scripts\activate
+     ```
+
+   - **Linux/Mac:**
+
+     ```bash
+     source .venv/bin/activate
+     ```
+
+3. Install the necessary modules/dependencies (This is a bit different than the blogs, since you are using the git repo)
+
+   ```bash
+   uv sync
+   ```
+
+4. Navigate to the series you want to work with:
 
    ```bash
    cd 1-foundation
    ```
-3. Follow the README in that folder for setup and usage.
+
+5. Follow the README in that folder for setup and usage.
 
 ## Series Progression
 
