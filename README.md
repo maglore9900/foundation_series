@@ -24,6 +24,7 @@ Each folder contains the complete code for that part of the series, along with i
 - Basic terminal/command line skills
 
 ### Optional (depending on LLM provider)
+
 - [Ollama](https://ollama.com/download) for local models
 - OpenAI API key
 - Anthropic API key
@@ -31,16 +32,16 @@ Each folder contains the complete code for that part of the series, along with i
 ### Quick Start
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/maglore9900/foundation_series.git
    cd foundation_series
    ```
-
 2. Navigate to the series you want to work with:
+
    ```bash
    cd 1-foundation
    ```
-
 3. Follow the README in that folder for setup and usage.
 
 ## Series Progression
